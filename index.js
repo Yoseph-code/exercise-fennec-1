@@ -11,10 +11,16 @@ class Fennec {
     const buyDay = 2
 
     if (sellDay === 0 && buyDay === 0) {
-      console.log(0)
+      return 0
     }
 
-    return this.calcProfit(input[sellDay - 1], input[buyDay - 1])
+    const output = this.calcProfit(input[sellDay - 1], input[buyDay - 1])
+
+    if (output >= 0) {
+      return 0
+    }
+
+    return output
   }
 }
 
